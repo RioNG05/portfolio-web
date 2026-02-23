@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Linh - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- SEO -->
+    <meta name="description" content="Linh Nguyen Portfolio Website">
+    <meta name="keywords" content="web developer, portfolio, frontend">
+    <meta name="author" content="Linh Nguyen">
+
+    <!-- Google Fonts: Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body class="bg-dark-theme">
+
+    <header>
+        <!-- Navbar (Glassmorphism) -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+            <div class="container">
+                <a class="navbar-brand fw-bold logo-text" href="#">LN<span class="text-primary-accent">.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-medium">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <main>
+        <!-- Hero / Home -->
+        <section id="home" class="min-vh-100 d-flex align-items-center position-relative overflow-hidden pt-5">
+            <div class="container z-index-1">
+                <div class="row align-items-center justify-content-between flex-column-reverse flex-lg-row">
+
+                    <div class="col-lg-6 mt-5 mt-lg-0 scroll-anim reveal-left">
+                        <p class="greeting-text text-primary-accent mb-2"><i class='bx bx-code-alt'></i> Hello, I
+                            am</p>
+                        <h1 class="display-3 fw-bolder text-white mb-3">Linh</h1>
+                        <h2 class="h3 text-light mb-4 text-opacity-75">
+                            <span class="typing-text"></span><span class="cursor">&nbsp;</span>
+                        </h2>
+                        <p class="lead text mb-5 pe-lg-5">
+                            I craft immersive, high-performance web experiences focusing on stunning UI design and
+                            interactive frontend development.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#contact" class="btn btn-primary-custom btn-lg">Let's Talk <i
+                                    class='bx bx-right-arrow-alt ms-1'></i></a>
+                            <a href="#about" class="btn btn-outline-custom btn-lg">Explore <i
+                                    class='bx bx-down-arrow-alt ms-1'></i></a>
+                        </div>
+
+                        <div class="social-links mt-5">
+                            <a href="#" class="social-icon"><i class='bx bxl-github'></i></a>
+                            <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#" class="social-icon"><i class='bx bxl-dribbble'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 text-center position-relative scroll-anim reveal-right">
+                        <div class="hero-image-wrapper glass-card p-2 rounded-circle mx-auto">
+                            <img src="./assets/image/coder.png" class="img-fluid rounded-circle"
+                                alt="Linh - Frontend Developer">
+                        </div>
+                        <div class="floating-badge badge-1 glass-card">
+                            <i class='bx bxl-react text-info fs-1'></i>
+                        </div>
+                        <div class="floating-badge badge-2 glass-card">
+                            <i class='bx bxl-css3 text-primary fs-1'></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-6 position-relative z-index-1">
+            <div class="container">
+                <div class="text-center mb-5 scroll-anim reveal-up">
+                    <h2 class="section-title text-white fw-bold">About <span class="text-primary-accent">Me</span></h2>
+                    <div class="divider mx-auto"></div>
+                </div>
+
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 scroll-anim reveal-left">
+                        <div class="glass-card p-4 p-md-5 rounded-4 h-100">
+                            <h3 class="h4 text-white mb-4">My Journey</h3>
+                            <p class="text-white leading-relaxed">
+                                With a deep passion for pixel-perfect design and smooth user experiences, I bridge the
+                                gap between aesthetics and functionality.
+                            </p>
+                            <p class="text-white leading-relaxed">
+                                I specialize in building responsive, accessible, and fast web applications using modern
+                                technologies. My approach generally involves writing clean, maintainable code while
+                                keeping an eye on the latest design trends like glassmorphism and dark mode interfaces.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 scroll-anim reveal-right">
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="skill-card glass-card rounded-4 p-4 text-center h-100">
+                                    <div class="skill-icon mb-3 text-primary-accent">
+                                        <i class='bx bx-code-curly fs-1'></i>
+                                    </div>
+                                    <h4 class="h5 text-white">Frontend Dev</h4>
+                                    <p class="text-muted small mb-0">HTML, CSS, JS, React</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="skill-card glass-card rounded-4 p-4 text-center h-100">
+                                    <div class="skill-icon mb-3 text-info">
+                                        <i class='bx bxs-palette fs-1'></i>
+                                    </div>
+                                    <h4 class="h5 text-white">UI/UX Design</h4>
+                                    <p class="text-muted small mb-0">Figma, Wireframing</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="skill-card glass-card rounded-4 p-4 text-center h-100">
+                                    <div class="skill-icon mb-3 text-warning">
+                                        <i class='bx bxl-bootstrap fs-1'></i>
+                                    </div>
+                                    <h4 class="h5 text-white">Frameworks</h4>
+                                    <p class="text-muted small mb-0">Bootstrap, Tailwind</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="skill-card glass-card rounded-4 p-4 text-center h-100">
+                                    <div class="skill-icon mb-3 text-success">
+                                        <i class='bx bx-devices fs-1'></i>
+                                    </div>
+                                    <h4 class="h5 text-white">Responsive</h4>
+                                    <p class="text-muted small mb-0">Mobile-First Approach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-6 position-relative z-index-1">
+            <div class="container">
+                <div class="text-center mb-5 scroll-anim reveal-up">
+                    <h2 class="section-title text-white fw-bold">Contact <span class="text-primary-accent">Me</span>
+                    </h2>
+                    <div class="divider mx-auto"></div>
+                    <p class="text-muted mt-3">Let's build something amazing together.</p>
+                </div>
+
+                <div class="row justify-content-center scroll-anim reveal-up">
+                    <div class="col-lg-8">
+                        <div class="glass-card p-4 p-md-5 rounded-4">
+                            <form id="contactForm" class="contact-form">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-floating input-group-custom">
+                                            <input type="text" class="form-control" id="name" placeholder="Name"
+                                                required>
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating input-group-custom">
+                                            <input type="email" class="form-control" id="email" placeholder="Email"
+                                                required>
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating input-group-custom">
+                                            <textarea class="form-control" id="message" placeholder="Message"
+                                                style="height: 150px" required></textarea>
+                                            <label for="message">Your Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit"
+                                            class="btn btn-primary-custom btn-lg w-100 position-relative"
+                                            id="submitBtn">
+                                            <span class="btn-text">Send Message <i class='bx bx-send ms-2'></i></span>
+                                            <span class="spinner-border spinner-border-sm d-none" role="status"
+                                                aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 position-relative z-index-1 text-center glass-footer">
+        <div class="container">
+            <div class="d-flex justify-content-center mb-3">
+                <a href="#" class="social-icon-footer mx-2"><i class='bx bxl-github'></i></a>
+                <a href="#" class="social-icon-footer mx-2"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" class="social-icon-footer mx-2"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <p class="mb-0 text-white small">
+                &copy; <span id="year"></span> Linh. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
