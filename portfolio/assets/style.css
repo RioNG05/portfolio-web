@@ -1,0 +1,380 @@
+/* ======== CSS Variables & Reset ======== */
+:root {
+    --bg-dark: #0a0a0f;
+    --bg-card: rgba(20, 20, 30, 0.4);
+    --primary-accent: #00f0ff;
+    --primary-hover: #00c3cc;
+    --text-main: #ffffff;
+    --text-muted: #dfdfe8;
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.bg-dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    font-family: var(--font-heading);
+}
+
+.py-6 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.text-primary-accent {
+    color: var(--primary-accent) !important;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.leading-relaxed {
+    line-height: 1.8;
+}
+
+/* ======== Background Elements ======== */
+.bg-shape {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.shape-1 {
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 240, 255, 0.15);
+}
+
+.shape-2 {
+    bottom: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: rgba(138, 43, 226, 0.12);
+    /* Purple tint */
+}
+
+
+/* ======== Glassmorphism utilities ======== */
+.glass-nav {
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.glass-footer {
+    background: rgba(10, 10, 15, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid var(--glass-border);
+}
+
+
+/* ======== Navbar ======== */
+.navbar-brand.logo-text {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+}
+
+.navbar .nav-link {
+    color: var(--text-muted) !important;
+    margin-left: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--text-main) !important;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-accent);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+
+/* ======== Buttons ======== */
+.btn-custom {
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-primary-custom {
+    background: var(--primary-accent);
+    color: var(--bg-dark);
+    border: 1px solid var(--primary-accent);
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.btn-primary-custom:hover {
+    background: transparent;
+    color: var(--primary-accent);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+}
+
+.btn-outline-custom {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: white;
+}
+
+
+/* ======== Hero Section ======== */
+.greeting-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-image-wrapper {
+    width: 280px;
+    height: 280px;
+    padding: 10px;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.15));
+}
+
+.floating-badge {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 4s ease-in-out infinite;
+}
+
+.badge-1 {
+    top: 10%;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.badge-2 {
+    bottom: 10%;
+    right: 0;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--primary-accent);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    font-size: 1.4rem;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.2);
+}
+
+/* ======== About & Skills ======== */
+.divider {
+    width: 60px;
+    height: 3px;
+    background: var(--primary-accent);
+    border-radius: 3px;
+}
+
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.skill-icon {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+/* ======== Contact Form ======== */
+.input-group-custom .form-control {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: white;
+    border-radius: 10px;
+}
+
+.input-group-custom .form-control:focus {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 0.25rem rgba(0, 240, 255, 0.1);
+}
+
+.form-floating>label {
+    color: var(--text-muted);
+}
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+    color: var(--primary-accent);
+}
+
+.social-icon-footer {
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon-footer:hover {
+    color: var(--primary-accent);
+}
+
+/* ======== Animations (Scroll Reveal) ======== */
+.scroll-anim {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-up {
+    transform: translateY(50px);
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.scroll-anim.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
